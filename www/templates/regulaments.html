@@ -1,0 +1,21 @@
+<ion-view title="Regulamento e Normas">
+	<ion-content>
+		<ion-list>
+			<ion-item class="item-icon-left" ng-repeat="document in documents" ng-click="openPDF('{{document.url}}')">
+				<i class="icon ion-document-text"></i>{{document.name}}
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>
+
+<script id="pdf-viewer.html" type="text/ng-template">
+	<ion-modal-view>
+		<ion-header-bar>
+			<h1 class="title"></h1>
+			<button ng-click="hide()" class="button button-icon icon ion-close"></button>
+		</ion-header-bar>
+		<ion-content>
+			<ng-pdf ng-if="pdfUrl" template-url="templates/viewer.html" canvasid="pdf" scale="page-fit"></ng-pdf>
+		</ion-content>
+	</ion-modal-view>
+</script>

@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers', 'starter.factory'])
+angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers', 'starter.factory', 'pdf'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -100,7 +100,27 @@ angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers', 'st
           controller: 'SelectionCtrl'
         }
       }
-  });
+  })
+
+	.state('app.regulaments', {
+		url: '/regulaments',
+		views: {
+			'menuContent': {
+				templateUrl:'templates/regulaments.html',
+				controller: 'RegulamentsCtrl'
+			}
+		}
+	})
+
+	.state('app.editais', {
+		url: '/editais',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/editais.html',
+				controller: 'EditaisCtrl'
+			}
+		}
+	});
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
 })

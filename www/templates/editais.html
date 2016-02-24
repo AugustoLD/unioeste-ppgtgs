@@ -1,0 +1,22 @@
+<ion-view title="Editais">
+	<ion-content>
+		<ion-list>
+			<ion-item class="item-text-wrap" ng-repeat="document in documents" ng-click="openPDF('{{document.url}}')">
+				{{document.name}}
+				<p>Edital {{document.number}}</p>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>
+
+<script id="pdf-viewer.html" type="text/ng-template">
+	<ion-modal-view>
+		<ion-header-bar>
+			<h1 class="title"></h1>
+			<button ng-click="hide()" class="button button-icon icon ion-close"></button>
+		</ion-header-bar>
+		<ion-content>
+			<ng-pdf ng-if="pdfUrl" template-url="templates/viewer.html" canvasid="pdf" scale="page-fit"></ng-pdf>
+		</ion-content>
+	</ion-modal-view>
+</script>

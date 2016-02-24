@@ -194,9 +194,106 @@ angular.module('starter.controllers', [])
   $scope.teacher = FacultyFactory[$stateParams.teacherId];
 })
 
+.controller('RegulamentsCtrl', ['$scope', '$ionicModal', function($scope, $ionicModal) {
+	$ionicModal.fromTemplateUrl('pdf-viewer.html', {
+		scope: $scope,
+		animation: 'slide-in-up'
+	}).then(function (modal) {
+		$scope.modal = modal;
+	});
+
+	$scope.openPDF = function(url) {
+		$scope.pdfUrl = url;
+		$scope.modal.show();
+	};
+
+	$scope.hide = function() {
+		$scope.modal.hide();
+	};
+
+	$scope.$on('$destroy', function(){
+		$scope.modal.remove();
+	});
+
+	$scope.documents = [
+		{
+			name: "Regulamento do programa",
+			url: "/assets/regulamento_programa.pdf"
+		},
+		{
+			name:"Projeto Pedagógico",
+			url:"/assets/projeto_pedagogico.pdf"
+		},
+		{
+			name: "Horário das Disciplinas",
+			url:"/assets/horario_disciplinas.pdf"
+		}
+	];
+}])
+
+.controller('EditaisCtrl',['$scope', '$ionicModal', function($scope, $ionicModal){
+	$ionicModal.fromTemplateUrl('pdf-viewer.html', {
+		scope: $scope,
+		animation: 'slide-in-up'
+	}).then(function (modal) {
+		$scope.modal = modal;
+	});
+
+	$scope.openPDF = function(url) {
+		$scope.pdfUrl = url;
+		$scope.modal.show();
+	};
+
+	$scope.hide = function() {
+		$scope.modal.hide();
+	};
+
+	$scope.$on('$destroy', function(){
+		$scope.modal.remove();
+	});
+
+	$scope.documents = [
+		{
+			name: "Processo Seletivo (Turma 2016 - 2018)",
+			number: "001",
+			url: "/assets/edital1_ps.pdf"
+		},
+		{
+			name:"Processo Seletivo - Inscrições Homologadas",
+			number: "002",
+			url:"/assets/edital2_ps_inscricoes.pdf"
+		},
+		{
+			name: "Processo Seletivo - Inscrições Homologadas com Solicitações de Recursos",
+			number: "003",
+			url:"/assets/edital3_ps_analise_recurso.pdf"
+		},
+		{
+			name: "Processo Seletivo - Resultado da Avaliação Dissertativa e Convocação para Entrevistas",
+			number: "004",
+			url:"/assets/edital4_ps_avaliacao_convocacao.pdf"
+		},
+		{
+			name: "Processo Seletivo - Resultado Final do Processo Seletivo para Alunos Regulares",
+			number: "005",
+			url:"/assets/edital5_ps_final.pdf"
+		},
+		{
+			name: "Normas para Admissão de Alunos Especiais",
+			number: "006",
+			url:"/assets/edital6_nomas_admissao.pdf"
+		},
+		{
+			name: "Prorrogação do Prazo Inscrição de Alunos Especiais 2016",
+			number: "007",
+			url:"/assets/edital7_prazo_inscricao.pdf"
+		}
+	];
+}])
+
 .controller('SelectionCtrl', function($scope) {
-		$scope.year = "2016";
-		$scope.period = "2016-2018";
-		$scope.vacancies = "14";
-		$scope.siteUrl = "http://www.unioeste.br/pos/tecnologiaegestaosustentabilidade/";
+	$scope.year = "2016";
+	$scope.period = "2016-2018";
+	$scope.vacancies = "14";
+	$scope.siteUrl = "http://www.unioeste.br/pos/tecnologiaegestaosustentabilidade/";
 });
