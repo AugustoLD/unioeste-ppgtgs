@@ -6,9 +6,28 @@
 	color: white;
 }
 
-.bottom-fixed {
-	position: fixed;
-	margin-left: -70px;
-	bottom: 15px;
-	left: 50%;
+.center {
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 10px;
+		display: block;
+}
+
+.subtitle {
+		display: block;
+		color: #999999;
+		font-size: 14px;
+}
+
+.item {
+		font-size: 18px !important;
+}
+
+.nested-list .icon {
+		font-size: 16px !important;
+}
+
+.nested-list .separator {
+		background-color: #bbbbbb;
+		height: 1px;
 }
