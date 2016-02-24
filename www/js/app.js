@@ -120,7 +120,18 @@ angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers', 'st
 				controller: 'EditaisCtrl'
 			}
 		}
-	});
+	})
+
+  .state('app.academicCalendar', {
+	  url: '/academicCalendar',
+	  views: {
+		  'menuContent': {
+			  templateUrl: 'templates/academic_calendar.html',
+			  controller: 'CalendarCtrl'
+		  }
+	  }
+  });
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
 })

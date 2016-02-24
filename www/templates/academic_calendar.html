@@ -1,0 +1,18 @@
+<ion-view view-title="Calendário Acadêmico">
+  <ion-content>
+    <ion-list>
+      <div ng-repeat="month in yearlyCalendar">
+        <ion-item class="item-text-wrap item-icon-right" ng-click="toggle(month)" ng-class="{active: isShown(month)}">
+          <i class="icon" ng-class="isShown(month) ?  'ion-chevron-up' : 'ion-chevron-down'" style="font-size:18px;"></i>
+          {{month.month}}
+        </ion-item>
+        <ion-item class="item-accordion" ng-show="isShown(month)">
+          <div class="row item-text-wrap" ng-repeat="date in month.dates">
+            <div class="col-20">{{ date.day }}</div>
+            <div class="col">{{ date.occurency }}</div>
+          </div>
+        </ion-item>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>
