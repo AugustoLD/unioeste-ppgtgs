@@ -41,3 +41,8 @@
 .card > .item-divider {
 		padding-top: 0;
 }
+
+.item-body {
+	color: black;
+	text-align: justify;
+}
