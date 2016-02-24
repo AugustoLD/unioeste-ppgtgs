@@ -73,5 +73,10 @@ angular.module('starter.controllers', [])
   ];
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+.controller('FacultyCtrl', function($scope, FacultyFactory) {
+  $scope.faculty = FacultyFactory;
+})
+
+.controller('TeacherCtrl', function($scope, $stateParams, FacultyFactory) {
+  $scope.teacher = FacultyFactory[$stateParams.teacherId];
 });

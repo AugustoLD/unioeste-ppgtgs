@@ -1,0 +1,12 @@
+<ion-view view-title="Corpo Docente">
+  <ion-content>
+    <ion-item collection-repeat="teacher in faculty">
+      <a class="item item-avatar" ng-href="#/app/faculty/{{ teacher.id }}">
+        <img src="img/{{ teacher.avatar }}">
+        <div class="item-text-wrap">
+          <h2>{{ teacher.name }}</h2>
+        </div>
+      </a>
+    </ion-item>
+  </ion-content>
+</ion-view>
