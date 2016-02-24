@@ -32,24 +32,6 @@ angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers', 'st
     controller: 'AppCtrl'
   })
 
-  .state('app.search', {
-    url: '/search',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/search.html'
-      }
-    }
-  })
-
-  .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html'
-        }
-      }
-    })
-
   .state('app.home', {
     url: '/home',
     views: {
@@ -88,6 +70,16 @@ angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers', 'st
         controller: 'TeacherCtrl'
       }
     }
+  })
+
+  .state('app.selectionProccess', {
+      url: '/selectionProccess',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/selection_proccess.html',
+          controller: 'SelectionCtrl'
+        }
+      }
   });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
