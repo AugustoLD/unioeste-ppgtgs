@@ -1,29 +1,14 @@
 <ion-view view-title="Linhas de Pesquisa">
   <ion-content>
-    <div class="research-line-title">
-      Tecnologias e Sustentabilidade
-    </div>
-    <div class="card">
-      <div class="item item-text-wrap">
-        Esta linha de pesquisa proporcionará ao aluno, a partir de uma perspectiva
-        interdisciplinar, a aplicação de tecnologias que contribuam para o
-        desenvolvimento de soluções e a adoção de novos produtos ou processos ou o
-        aprimoramento desses, visando o desenvolvimento sustentável. Contempla a utilização
-        de recursos computacionais, de engenharias, estudos matemáticos e experimentais,
-        nas diferentes áreas de atuação.
+    <ion-item collection-repeat="line in lines">
+      <div class="research-line-title item-text-wrap">
+        {{ line.title }}
       </div>
-    </div>
-    <br>
-    <div class="research-line-title">
-      Gestão e Desenvolvimento Regional Sustentável
-    </div>
-    <div class="card">
-      <div class="item item-text-wrap">
-        Esta linha de pesquisa aborda estudos sobre métodos, técnicas e modelos gerenciais
-        de apoio à tomada de decisão, que proporcionem ao aluno uma visão sistêmica e
-        interdisciplinar voltada para a resolução de problemas nos diferentes ambientes de
-        trabalho, promoção do desenvolvimento econômico, social, cultural e ambiental da região.
+      <div class="card">
+        <div class="item item-text-wrap">
+          {{ line.body }}
+        </div>
       </div>
-    </div>
+    </ion-item>
   </ion-content>
 </ion-view>

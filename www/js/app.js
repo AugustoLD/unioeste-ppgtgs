@@ -64,7 +64,8 @@ angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers'])
       url: '/researchLine',
       views: {
         'menuContent': {
-          templateUrl: 'templates/research_line.html'
+          templateUrl: 'templates/research_line.html',
+          controller: 'ResearchCtrl'
         }
       }
     })
