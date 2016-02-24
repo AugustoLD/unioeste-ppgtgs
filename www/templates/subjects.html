@@ -1,0 +1,66 @@
+<ion-view view-title="Disciplinas">
+	<ion-pane>
+		<ion-tabs class="tabs-positive">
+			<ion-tab title="Obrigatórias" ui-sref="required-subjects">
+				<ion-nav-view name="required-tab">
+					<ion-content>
+						<ion-list>
+							<div ng-repeat="subject in required_subjects">
+								<ion-item class="item-text-wrap item-icon-right" ng-click="toggle(subject)" ng-class="{active: isShown(subject)}">
+									<i class="icon" ng-class="isShown(subject) ?  'ion-chevron-up' : 'ion-chevron-down'" style="font-size:18px;"></i>
+									{{subject.name}}
+								</ion-item>
+								<ion-item class="item-accordion" ng-show="isShown(subject)">
+									<p>Carga horária: {{subject.workload}}</p>
+									<p>Créditos: {{subject.credits}}</p>
+									<p>Professor: {{subject.teacher}}</p>
+								</ion-item>
+							</div>
+						</ion-list>
+					</ion-content>
+				</ion-nav-view>
+			</ion-tab>
+
+			<ion-tab title="Eletivas" ui-sref="elective-subjects">
+				<ion-nav-view name="elective-tab">
+					<ion-content>
+						<ion-list>
+							<div ng-repeat="subject in elective_subjects">
+								<ion-item class="item-text-wrap item-icon-right" ng-click="toggle(subject)" ng-class="{active: isShown(subject)}">
+									<i class="icon" ng-class="isShown(subject) ?  'ion-chevron-up' : 'ion-chevron-down'" style="font-size:18px;"></i>
+									{{subject.name}}
+								</ion-item>
+								<ion-item class="item-accordion" ng-show="isShown(subject)">
+									<p>Linha de Pesquisa: {{subject.research_area}}</p>
+									<p>Carga horária: {{subject.workload}}</p>
+									<p>Créditos: {{subject.credits}}</p>
+									<p>Professor: {{subject.teacher}}</p>
+								</ion-item>
+							</div>
+						</ion-list>
+					</ion-content>
+				</ion-nav-view>
+			</ion-tab>
+
+			<ion-tab title="Comuns" ui-sref="common-subjects">
+				<ion-nav-view name="common-tab">
+					<ion-content>
+						<ion-list>
+							<div ng-repeat="subject in common_subjects">
+								<ion-item class="item-text-wrap item-icon-right" ng-click="toggle(subject)" ng-class="{active: isShown(subject)}">
+									<i class="icon" ng-class="isShown(subject) ?  'ion-chevron-up' : 'ion-chevron-down'" style="font-size:18px;"></i>
+									{{subject.name}}
+								</ion-item>
+								<ion-item class="item-accordion" ng-show="isShown(subject)">
+									<p>Carga horária: {{subject.workload}}</p>
+									<p>Créditos: {{subject.credits}}</p>
+									<p>Professor: {{subject.teacher}}</p>
+								</ion-item>
+							</div>
+						</ion-list>
+					</ion-content>
+				</ion-nav-view>
+			</ion-tab>
+		</ion-tabs>
+	</ion-pane>
+</ion-view>

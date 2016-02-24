@@ -74,5 +74,145 @@ angular.module('starter.controllers', [])
   ];
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+.controller('SubjectsCtrl', function($scope) {
+	$scope.toggle = function(item) {
+		if($scope.isShown(item)) {
+			$scope.shownItem = null;
+		} else {
+			$scope.shownItem = item;
+		}
+	};
+
+	$scope.isShown = function(item) {
+		return $scope.shownItem === item;
+	}
+
+	$scope.required_subjects = [
+		{
+			name: "Metodologia da Pesquisa Interdisciplinar",
+			workload: 60,
+			credits: 4,
+			teacher: "José Ricardo"
+		},
+		{
+			name: "Seminários da Pesquisa Interdisciplinar",
+			workload: 60,
+			credits: 4,
+			teacher: "Carlos Pantaleão"
+		}
+	];
+
+	$scope.elective_subjects = [
+		{
+			name: "Inovação Tecnológica e Portfólio de Tecnologias",
+			research_area: "Tecnologia e Sustentabilidade",
+			workload: 45,
+			credits: 3,
+			teacher: "Dechechi"
+		},
+		{
+			name: "Qualidade Aplicada ao Desenvolvimento de Tecnologias",
+			research_area: "Tecnologia e Sustentabilidade",
+			workload: 45,
+			credits: 3,
+			teacher: "Eduardo"
+		},
+		{
+			name: "Gestão Ambiental",
+			research_area: "Tecnologia e Sustentabilidade",
+			workload: 45,
+			credits: 3,
+			teacher: "Neucir"
+		},
+		{
+			name: "Tecnologia de Informação",
+			research_area: "Tecnologia e Sustentabilidade",
+			workload: 45,
+			credits: 3,
+			teacher: "Clodis"
+		},
+		{
+			name: "Análise Multicritério de Apoio a Decisão",
+			research_area: "Gestão e Desenvolvimento Regional Sustentável",
+			workload: 45,
+			credits: 3,
+			teacher: "Pantaleão"
+		},
+		{
+			name: "Gestão de Cadeias de Apoio de Suprimentos",
+			research_area: "Gestão e Desenvolvimento Regional Sustentável",
+			workload: 45,
+			credits: 3,
+			teacher: "Manoela"
+		},
+		{
+			name: "Empreendedorismo e Marketing Sustentável",
+			research_area: "Gestão e Desenvolvimento Regional Sustentável",
+			workload: 45,
+			credits: 3,
+			teacher: "Eduardo"
+		},
+		{
+			name: "Gestão da Inovação Tecnológica",
+			research_area: "Gestão e Desenvolvimento Regional Sustentável",
+			workload: 45,
+			credits: 3,
+			teacher: "Waldir"
+		}
+	];
+
+	$scope.common_subjects = [
+		{
+			name: "Planejamento Estratégico e Modelagem Organizacional",
+			workload: 30,
+			credits: 2,
+			teacher: "Elói"
+		},
+		{
+			name: "Tópicos Especiais I",
+			workload: 30,
+			credits: 2,
+			teacher: "Eliane"
+		},
+		{
+			name: "Estatística",
+			workload: 30,
+			credits: 2,
+			teacher: "Luciano"
+		},
+		{
+			name: "Gerenciamento de Projetos",
+			workload: 30,
+			credits: 2,
+			teacher: "Willian"
+		}
+	];
+
+})
+
+.controller('ContactCtrl', function($scope) {
+	$scope.address = {
+		name: "Centro de Engenharia e Ciências Exatas - CECE/PTI",
+		complement: "Parque Tecnológico de Itaipu, Bloco B5, Espaço 2",
+		street: "Av. Tancredo Neves",
+		number: 6731,
+		cep: "85856-970",
+		city: "Foz do Iguaçu",
+		state: "PR"
+	};
+
+	$scope.phones = [
+		{
+			type: "Fixo",
+			ddd: "45",
+			number: "3576-8279"
+		}
+	];
+
+	$scope.emails = [
+		{address: "foz.ppgtgs@unioeste.br"},
+		{address: "pos.tecnologiaegestao@gmail.com"}
+	];
+
+	$scope.office_hours = "Segunda à Sexta-Feira: 13h30 às 17h30";
 });

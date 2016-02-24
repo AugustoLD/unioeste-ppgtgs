@@ -1,43 +1,43 @@
 <ion-view view-title="PPGTGS">
-  <ion-content>
-			<div class="row">
-				<div class="col">
-						<h4 class="text-center">{{title}}</h4>
-				</div>
+	<ion-content>
+		<div class="row">
+			<div class="col">
+				<h4 class="text-center">{{title}}</h4>
 			</div>
+		</div>
 
-			<ion-list>
-					<ion-item>
-							{{area_concentracao}}
-							<span class="subtitle">Área de Concentração</span>
-					</ion-item>
-					<ion-item>
-							{{area_avaliacao}}
-							<span class="subtitle">Área de Avaliação da Capes</span>
-					</ion-item>
-					<ion-item class="item-icon-left">
-							<i class="icon ion-search"></i>	Linhas de Pesquisa
-					</ion-item>
-					<ion-list class="nested-list">
-							<div class="row">
-									<div class="col col-offset-10 col-90">
-											<div class="separator"></div>
-									</div>
-							</div>
+		<ion-list>
+			<ion-item>
+				{{area_concentracao}}
+				<p>Área de Concentração</p>
+			</ion-item>
+			<ion-item>
+				{{area_avaliacao}}
+				<p>Área de Avaliação da Capes</p>
+			</ion-item>
+			<ion-item class="item-icon-left">
+				<i class="icon ion-search"></i>	Linhas de Pesquisa
+			</ion-item>
+			<ion-list class="nested-list">
+				<div class="row">
+					<div class="col col-offset-10 col-90">
+						<div class="separator"></div>
+					</div>
+				</div>
 
-							<ion-item class="item-icon-left" ng-repeat="linha in linhas">
-									<i class="icon ion-plus"></i> {{linha.name}}
-							</ion-item>
-					</ion-list>
-					<ion-item>
-							{{coordenador}}
-							<span class="subtitle">Coordenador Especial</span>
-					</ion-item>
-					<ion-item>
-							{{assistente}}
-							<span class="subtitle">Assistente</span>
-					</ion-item>
+				<ion-item class="item-icon-left" ng-repeat="linha in linhas">
+					<i class="icon ion-plus"></i> {{linha.name}}
+				</ion-item>
 			</ion-list>
-			<img src="img/logo_unioeste.png" class="center"/>
+			<ion-item>
+				{{coordenador}}
+				<p>Coordenador Especial</p>
+			</ion-item>
+			<ion-item>
+				{{assistente}}
+				<p>Assistente</p>
+			</ion-item>
+		</ion-list>
+		<img src="img/logo_unioeste.png" class="center"/>
 	</ion-content>
 </ion-view>

@@ -1,0 +1,47 @@
+<ion-view title="Contato">
+	<ion-content>
+		<ion-list>
+			<ion-item class="item-text-wrap item-icon-left">
+				<i class="icon ion-home" sytle="font-size:42px !important;"></i> {{address.name}}<br />
+			</ion-item>
+			<ion-item class="item-text-wrap item-icon-left">
+				{{address.complement}}
+				<p>{{address.street}}, {{address.number}}</p>
+				<p>{{address.cep}} - {{address.city}} - {{address.state}}</p>
+				</ion-item>
+
+				<div class="row">
+					<div class="col col-offset-10 col-90">
+						<div class="separator"></div>
+					</div>
+				</div>
+
+				<ion-item class="item-icon-left" ng-repeat="phone in phones">
+					<i class="icon ion-android-call"></i>({{phone.ddd}}) phone.number
+					<p>{{phone.type}}</p>
+				</ion-item>
+
+				<div class="row">
+					<div class="col col-offset-10 col-90">
+						<div class="separator"></div>
+					</div>
+				</div>
+
+				<ion-item class="item-icon-left" ng-repeat="email in emails">
+					<i class="icon ion-email"></i>{{email.address}}
+				</ion-item>
+
+				<div class="row">
+					<div class="col col-offset-10 col-90">
+						<div class="separator"></div>
+					</div>
+				</div>
+
+				<ion-item class="item-icon-left">
+					<i class="icon ion-clock"></i>{{office_hours}}
+					<p>Horário de Atendimento</p>
+				</ion-item>
+
+		</ion-list>
+	</ion-content>
+</ion-view>

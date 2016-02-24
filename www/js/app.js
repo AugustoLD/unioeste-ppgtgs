@@ -25,7 +25,7 @@ angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-    .state('app', {
+	.state('app', {
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
@@ -68,17 +68,31 @@ angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers'])
           controller: 'ResearchCtrl'
         }
       }
-    })
+  })
 
-  .state('app.single', {
-    url: '/home/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
-      }
-    }
+  .state('app.subjects', {
+	  url: '/subjects',
+	  views: {
+		  'menuContent': {
+			  templateUrl: 'templates/subjects.html',
+			  controller: 'SubjectsCtrl'
+		  }
+	  }
+  })
+
+	.state('app.contact', {
+		url: '/contact',
+		views: {
+			'menuContent': {
+				templateUrl: 'templates/contact.html',
+				controller: 'ContactCtrl'
+			}
+		}
   });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
-});
+})
+
+.config(['$ionicConfigProvider', function($ionicConfigProvider){
+	$ionicConfigProvider.tabs.position('bottom');
+}]);
