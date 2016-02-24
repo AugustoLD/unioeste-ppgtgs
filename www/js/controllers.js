@@ -42,14 +42,15 @@ angular.module('starter.controllers', [])
 })
 
 .controller('HomeCtrl', function($scope) {
-  $scope.home = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
+		$scope.title = "Programa de Pós-Graduação Stricto Sensu em Tecnologias, Gestão e Sustentabilidade";
+		$scope.area_concentracao = "Tecnologia e Gestão";
+		$scope.area_avaliacao = "Administração";
+		$scope.linhas = [
+				{name: "Tecnologia e Sustentabilidade"},
+				{name: "Gestão e Desenvolvimento Regional Sustentável"}
+		];
+		$scope.coordenador = "Prof. Carlos Henrique Zanelato Pantaleão";
+		$scope.assistente = "Elizete Aparecida Zanellato Pimenta";
 })
 
 .controller('ResearchCtrl', function($scope) {

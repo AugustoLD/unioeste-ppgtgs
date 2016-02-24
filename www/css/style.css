@@ -6,22 +6,38 @@
 	color: white;
 }
 
-.bottom-fixed {
-	position: fixed;
-	margin-left: -70px;
-	bottom: 15px;
-	left: 50%;
+.center {
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 10px;
+		display: block;
 }
 
-.research-line-title {
-	color: black;
-	font-size: 12pt;
-	font-weight: bolder;
-	text-align: center;
-	line-height: 120%;
+.subtitle {
+		display: block;
+		color: #999999;
+		font-size: 14px;
 }
-.card .item {
+
+.item {
+		font-size: 18px !important;
+}
+
+.nested-list .icon {
+		font-size: 16px !important;
+}
+
+.nested-list .separator {
+		background-color: #bbbbbb;
+		height: 1px;
+}
+
+.card > .item-text-wrap {
 	color: black;
 	text-align: justify;
 	background: #0099FF;
+}
+
+.card > .item-divider {
+		padding-top: 0;
 }
