@@ -11,33 +11,33 @@
 				</ion-item>
 
 				<div class="row">
-					<div class="col col-offset-10 col-90">
+					<div class="col-90 col-offset-10">
 						<div class="separator"></div>
 					</div>
 				</div>
 
-				<ion-item class="item-icon-left" ng-repeat="phone in phones">
-					<i class="icon ion-android-call"></i>({{phone.ddd}}) phone.number
+				<ion-item class="item-icon-left item-text-wrap" ng-repeat="phone in phones">
+          <i class="icon ion-android-call"></i>({{phone.ddd}}) {{phone.number}}
 					<p>{{phone.type}}</p>
 				</ion-item>
 
 				<div class="row">
-					<div class="col col-offset-10 col-90">
+					<div class="col-90 col-offset-10">
 						<div class="separator"></div>
 					</div>
 				</div>
 
-				<ion-item class="item-icon-left" ng-repeat="email in emails">
+				<ion-item class="item-icon-left item-text-wrap" ng-repeat="email in emails">
 					<i class="icon ion-email"></i>{{email.address}}
 				</ion-item>
 
 				<div class="row">
-					<div class="col col-offset-10 col-90">
+					<div class="col-90 col-offset-10">
 						<div class="separator"></div>
 					</div>
 				</div>
 
-				<ion-item class="item-icon-left">
+				<ion-item class="item-icon-left item-text-wrap">
 					<i class="icon ion-clock"></i>{{office_hours}}
 					<p>Horário de Atendimento</p>
 				</ion-item>

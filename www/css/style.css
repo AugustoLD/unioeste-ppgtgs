@@ -7,26 +7,26 @@
 }
 
 .center {
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 10px;
-		display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	display: block;
 }
 
 .item {
-		font-size: 18px !important;
+	font-size: 18px !important;
 }
 
 .nested-list .icon {
-		font-size: 16px !important;
+	font-size: 16px !important;
 }
 
 .separator {
-		background-color: #bbbbbb;
-		height: 1px;
+	background-color: #bbbbbb;
+	height: 1px;
 }
 
-.card > .item-text-wrap {
+.card > .item-card-body {
 	color: black;
 	text-align: justify;
 	background: #0099FF;
@@ -55,4 +55,17 @@
 .item-body {
 	color: black;
 	text-align: justify;
+}
+
+.col {
+	font-size: 12px;
+	text-align:center;
+	line-height:120%;
+	border:thin gray solid;
+}
+
+.col-20 {
+	font-size: 12px;
+	text-align:center;
+	border:thin gray solid;
 }
