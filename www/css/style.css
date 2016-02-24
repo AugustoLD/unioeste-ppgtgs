@@ -31,3 +31,16 @@
 		background-color: #bbbbbb;
 		height: 1px;
 }
+
+.research-line-title {
+	color: black;
+	font-size: 12pt;
+	font-weight: bolder;
+	text-align: center;
+	line-height: 120%;
+}
+.card .item {
+	color: black;
+	text-align: justify;
+	background: #0099FF;
+}

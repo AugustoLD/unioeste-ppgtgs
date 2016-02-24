@@ -1,0 +1,14 @@
+<ion-view view-title="Linhas de Pesquisa">
+  <ion-content>
+    <ion-item collection-repeat="line in lines">
+      <div class="research-line-title item-text-wrap">
+        {{ line.title }}
+      </div>
+      <div class="card">
+        <div class="item item-text-wrap">
+          {{ line.body }}
+        </div>
+      </div>
+    </ion-item>
+  </ion-content>
+</ion-view>

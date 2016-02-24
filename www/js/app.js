@@ -49,12 +49,23 @@ angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers'])
         }
       }
     })
-    .state('app.home', {
-      url: '/home',
+
+  .state('app.home', {
+    url: '/home',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/home.html',
+        controller: 'HomeCtrl'
+      }
+    }
+  })
+
+  .state('app.researchLine', {
+      url: '/researchLine',
       views: {
         'menuContent': {
-          templateUrl: 'templates/home.html',
-          controller: 'HomeCtrl'
+          templateUrl: 'templates/research_line.html',
+          controller: 'ResearchCtrl'
         }
       }
     })
